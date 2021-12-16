@@ -7,20 +7,20 @@ using UnityEngine.UI;
 public class Score : MonoBehaviour
 {
     public Text score;
-    public Text killed;
+    //public Text killed;
     public Text highScore;
 
     void Start() // Awake
     {
         score.text = "SCORE: ";
         highScore.text = $"HIGHEST: {PlayerPrefs.GetInt("HighScore", 0)}";
-        killed.text = $"F*CKED UP 0 ALIEN MOTHERFUCKERS";
+        //killed.text = $"KILLED 0 ALIENS";
         //highScore.text = PlayerPrefs.GetInt("HighScore", 0).ToString();
     }
     void Update()
     {
         score.text = $"SCORE: {GameMasteR.Score}";
-        killed.text = $"F*CKED UP {GameMasteR.Killed} ALIEN MOTHERFUCKERS";
+        //killed.text = $"KILLED {GameMasteR.Killed} ALIENS";
 
         if (GameMasteR.Score > PlayerPrefs.GetInt("HighScore", 0))
         {
